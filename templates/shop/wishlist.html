@@ -1,0 +1,90 @@
+{% extends 'partials/base.html' %}
+{% block section %}
+    <section class="comingsoon">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-9">
+                    <div class="page-title">
+                        <h2 class="text-dark fw-light lh-base mt-5">Explore your <span
+                            class="fw-medium title">favourites</span>.</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="sm-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    {% if not wishlist_items %}
+                    <div class="alert alert-warning" role="alert">
+                        Your wishlist is currently empty.
+                    </div>
+                    {% else %}
+                    <div class="table-responsive mt-4">
+                        <table class="table caption-top table-borderless pro-table">
+                            <thead class="bg-light text-dark">
+                                <tr>
+                                    <th scope="col" class="fw-semibold mt-2">
+                                        Products
+                                    </th>
+                                    <th scope="col" class="fw-semibold mt-2">
+                                        Price
+                                    </th>
+                                    <th scope="col" class="fw-semibold mt-2">
+                                        Discount
+                                    </th>
+                                    <th scope="col" class="fw-semibold mt-2">
+                                        Quantity
+                                    </th>
+                                    <th scope="col" class="fw-semibold mt-2">
+                                        Remove
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {% for item in wishlist_items %}
+                                <tr class="align-middle">
+                                    <th scope="row">
+                                        <img class="img-fluid rounded" src="{{ url_for('static', filename=item.product.image) }}" width="125" alt="{{ item.product.name }}" />
+                                    </th>
+                                    <td>
+                                        <h5 class="fs-16 fw-medium">{{ item.product.name }}</h5>
+                                        <div class="price d-inline-block">
+                                            <ins class="text-dark pe-1 fs-15 fw-semibold text-decoration-none">{{ item.product.price }}</ins>
+                                            {% if item.product.discount %}
+                                            <del class="text-muted fs-15">{{ item.product.original_price }}</del>
+                                            {% endif %}
+                                        </div>
+                                    </td>
+                                    <td>
+                                        {% if item.product.discount %}
+                                        <div>
+                                            <span class="badge bg-soft-primary text-primary rounded-3 fs-14 fw-bold py-2">-{{ item.product.discount }}%</span>
+                                        </div>
+                                        {% endif %}
+                                    </td>
+                                    <td>
+                                        <select class="form-select border" id="autoSizingSelect">
+                                            {% for quantity in range(1, 6) %}
+                                            <option value="{{ quantity }}" {% if item.quantity == quantity %}selected{% endif %}>{{ quantity }}</option>
+                                            {% endfor %}
+                                        </select>
+                                    </td>
+                                    <td>
+                                        <a href="{{ url_for('wishlist_remove', product_id=item.product.id) }}" class="text-dark fw-semibold">Remove</a>
+                                    </td>
+                                </tr>
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}
+
+        

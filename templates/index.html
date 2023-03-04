@@ -1,0 +1,561 @@
+{% extends 'partials/base.html' %} {% block section %}
+<section>
+  <div id="countdown-timer" class="text-center mt-5">
+    <div>
+      Sale starts in <span id="days"></span> D <span id="hours"></span> H
+      <span id="minutes"></span> M <span id="seconds"></span> S
+    </div>
+  </div>
+</section>
+<br />
+<section class="offers">
+  <div
+    id="carouselExampleControls"
+    class="carousel slide"
+    data-bs-ride="carousel"
+  >
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img
+          src="https://imgs.search.brave.com/3WjGT05LBtBxwrdHyhkhANa6KCWtgtjztGPkj5ikCjw/rs:fit:1200:1200:1/g:ce/aHR0cHM6Ly9pLnBp/bmltZy5jb20vb3Jp/Z2luYWxzLzIxLzRj/LzAzLzIxNGMwMzVl/YWVlNDBhM2NiNTIw/OWFmMzFkZDZjOTll/LmpwZw"
+          class="d-block w-100"
+          alt="Offer 1"
+        />
+      </div>
+      <div class="carousel-item">
+        <img
+          src="https://imgs.search.brave.com/AyPiKmiWx3uxo_RweT-XAts_2vUD_DtgQFceuuztkqA/rs:fit:1200:627:1/g:ce/aHR0cDovL2dyYXBo/aWNnb29nbGUuY29t/L3dwLWNvbnRlbnQv/dXBsb2Fkcy8yMDE3/LzEwL0ZhY2Vib29r/LU5ldy1GYXNoaW9u/LVNhbGUtQmFubmVy/LmpwZw"
+          class="d-block w-100"
+          alt="Offer 2"
+        />
+      </div>
+      <div class="carousel-item">
+        <img
+          src="https://imgs.search.brave.com/DTiFe4vt9RjbxRIJKX7X_Ao9gtmUPaqn19YBKVT7Jq8/rs:fit:1200:627:1/g:ce/aHR0cHM6Ly9zMy5l/bnZhdG8uY29tL2Zp/bGVzLzE0NzYzMjA4/NS8wMV9wcmV2aWV3/My5qcGc"
+          class="d-block w-100"
+          alt="Offer 3"
+        />
+      </div>
+    </div>
+    <button
+      class="carousel-control-prev"
+      type="button"
+      data-bs-target="#carouselExampleControls"
+      data-bs-slide="prev"
+    >
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button
+      class="carousel-control-next"
+      type="button"
+      data-bs-target="#carouselExampleControls"
+      data-bs-slide="next"
+    >
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+</section>
+
+<!-- shuffle-->
+<section class="section">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div
+        class="col-lg-12 filters-group-wrap mb-3 d-flex align-items-center justify-content-center"
+      >
+        <div class="filters-group">
+          <ul
+            class="container-filter mb-0 categories-filter list-unstyled filter-options"
+          >
+            <li
+              class="list-inline-item categories position-relative my-sm-0 my-2"
+              data-group="branding"
+            >
+              <a class="" href="javascript:void(0)">Latest Arrivals</a>
+            </li>
+            <li
+              class="list-inline-item categories position-relative my-sm-0 my-2"
+              data-group="designing"
+            >
+              <a href="javascript:void(0)">Top picks</a>
+            </li>
+            <li
+              class="list-inline-item categories position-relative my-sm-0 my-2"
+              data-group="photography"
+            >
+              <a href="javascript:void(0)">Vysta Luxe</a>
+            </li>
+            <li
+              class="list-inline-item categories position-relative my-sm-0 my-2"
+              data-group="development"
+            >
+              <a href="javascript:void(0)">March Trends </a>
+            </li>
+            <li
+              class="list-inline-item categories position-relative my-sm-0 my-2"
+              data-group="branding"
+            >
+              <a class="" href="javascript:void(0)">Him & Her</a>
+            </li>
+            <li
+              class="list-inline-item categories position-relative my-sm-0 my-2"
+              data-group="designing"
+            >
+              <a href="javascript:void(0)">Best Picks</a>
+            </li>
+            <li
+              class="list-inline-item categories position-relative my-sm-0 my-2"
+              data-group="photography"
+            >
+              <a href="javascript:void(0)">Budget picks</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!--end col-->
+    </div>
+
+    <!--end row-->
+
+    <div id="grid" class="row">
+      <div
+        class="col-lg-4 col-md-6 col-12 spacing picture-item"
+        data-groups='["branding"]'
+      >
+        <div
+          class="card border-0 work-container work-grid position-relative d-block overflow-hidden rounded"
+        >
+          <div class="card-body p-0">
+            <a href="/shop/productdetails" class="d-inline-block" title="">
+              <img
+                src="https://assets.myntassets.com/h_720,q_90,w_540/v1/assets/images/1700871/2020/1/22/f932ae44-0fb8-4b92-b7bc-f1756253294b1579692118186-HRX-by-Hrithik-Roshan-Men-Teal-Blue-Printed-T-shirt-90515796-1.jpg"
+                class="img-fluid rounded"
+                alt="work-image"
+              />
+            </a>
+            <div class="content bg-light p-3 shadow">
+              <h6>
+                <a
+                  href="/shop/productdetails"
+                  class="text-dark fw-medium fs-15"
+                  >HRX by Hrithik Roshan | Men Teal Blue Printed Pure Cotton T-shirt</a
+                >
+              </h6>
+              <p class="fs-14 text-muted font-weight-normal tag mb-0">
+                ₹349
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--end col-->
+
+      <div
+        class="col-lg-4 col-md-6 col-12 spacing picture-item"
+        data-groups='["designing"]'
+      >
+        <div
+          class="card border-0 work-container work-grid position-relative d-block overflow-hidden rounded"
+        >
+          <div class="card-body p-0">
+            <a
+              href="/shop/soon"
+              data-src="https://assets.myntassets.com/h_720,q_90,w_540/v1/assets/images/22089394/2023/2/22/92aa329a-7612-4a98-a12a-3cc893384bf11677089572734NavyBluePoloCollarFullSleevesSweatshirt1.jpg"
+              data-gallery="myGal"
+              class="d-inline-block"
+              title=""
+            >
+              <img
+                src="https://assets.myntassets.com/h_720,q_90,w_540/v1/assets/images/9973475/2022/11/14/b5639b13-e56a-4b59-8756-7e8b36c7775f1668419486394-Roadster-Men-Black--Grey-Striped-Polo-Collar-Pure-Cotton-T-s-1.jpg"
+                class="img-fluid rounded"
+                alt="work-image"
+              />
+            </a>
+            <div class="content bg-light p-3 shadow">
+              <h6>
+                <a
+                  href="/shop/soon"
+                  class="text-dark fw-medium fs-15"
+                  >Roadster | The Life Co. Men Black & Grey Striped Polo Collar Pure Cotton T-shirt </a
+                >
+              </h6>
+              <p class=""fs-14 text-muted font-weight-normal tag mb-0"">₹419 </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--end col-->
+
+      <div
+        class="col-lg-4 col-md-6 col-12 spacing picture-item"
+        data-groups='["photography"]'
+      >
+        <div
+          class="card border-0 work-container work-grid position-relative d-block overflow-hidden rounded"
+        >
+          <div class="card-body p-0">
+            <a
+              href="/shop/soon"
+              data-src="https://assets.myntassets.com/h_720,q_90,w_540/v1/assets/images/9973475/2022/11/14/b5639b13-e56a-4b59-8756-7e8b36c7775f1668419486394-Roadster-Men-Black--Grey-Striped-Polo-Collar-Pure-Cotton-T-s-1.jpg"
+              data-gallery="myGal"
+              class="d-inline-block"
+              title=""
+            >
+              <img
+                src="https://assets.myntassets.com/h_720,q_90,w_540/v1/assets/images/17048614/2022/2/4/b0eb9426-adf2-4802-a6b3-5dbacbc5f2511643971561167KhushalKWomenBlackEthnicMotifsAngrakhaBeadsandStonesKurtawit7.jpg"
+                class="img-fluid rounded"
+                alt="work-image"
+              />
+            </a>
+            <div class="content bg-light p-3 shadow">
+              <h6>
+                <a
+                  href="/shop/soon"
+                  class="text-dark fw-medium fs-15"
+                  >Khushal K | Women Black Ethnic Motifs Printed Kurta with Palazzos & With Dupatta </a
+                >
+              </h6>
+              <p class="fs-14 text-muted font-weight-normal tag mb-0">
+                ₹1427
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--end col-->
+
+      <div
+        class="col-lg-4 col-md-6 col-12 spacing picture-item"
+        data-groups='["development"]'
+      >
+        <div
+          class="card border-0 work-container work-grid position-relative d-block overflow-hidden rounded"
+        >
+          <div class="card-body p-0">
+            <a
+              href="/shop/soon"
+              data-src="https://assets.myntassets.com/h_720,q_90,w_540/v1/assets/images/16311340/2021/12/23/a78baa8a-8c78-4578-9c08-c29b5da6eead1640263285314-STREET-9-Women-Tops-7911640263284810-2.jpg"
+              data-gallery="myGal"
+              class="d-inline-block"
+              title=""
+            >
+              <img
+                src="https://assets.myntassets.com/h_720,q_90,w_540/v1/assets/images/16311340/2021/12/23/a78baa8a-8c78-4578-9c08-c29b5da6eead1640263285314-STREET-9-Women-Tops-7911640263284810-2.jpg"
+                class="img-fluid rounded"
+                alt="work-image"
+              />
+            </a>
+            <div class="content bg-light p-3 shadow">
+              <h6>
+                <a
+                  href="/shop/soon"
+                  class="text-dark fw-medium fs-15"
+                  >STREET 9 | Women Elegant Lavender Solid Cropped Top</a
+                >
+              </h6>
+              <p class="fs-14 text-muted font-weight-normal tag mb-0">₹999</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--end col-->
+
+      <div
+        class="col-lg-4 col-md-6 col-12 spacing picture-item"
+        data-groups='["branding"]'
+      >
+        <div
+          class="card border-0 work-container work-grid position-relative d-block overflow-hidden rounded"
+        >
+          <div class="card-body p-0">
+            <a href="/shop/soon" class="d-inline-block" title="">
+              <img
+                src="https://assets.myntassets.com/h_1440,q_90,w_1080/v1/assets/images/20380970/2022/10/13/cc0895cc-cfb4-4338-bfa7-dac4313959221665645066309AthenaMaroonThreePieceBlazerCo-Ordset1.jpg"
+                class="img-fluid rounded"
+                alt="work-image"
+              />
+            </a>
+            <div class="content bg-light p-3 shadow">
+              <h6>
+                <a
+                  href="/shop/soon"
+                  class="text-dark fw-medium fs-15"
+                  >Athena | Women Maroon 3 Piece Blazer Co-Ords Set                  </a
+                >
+              </h6>
+              <p class="fs-14 text-muted font-weight-normal tag mb-0">₹3499</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--end col-->
+
+      <div
+        class="col-lg-4 col-md-6 col-12 spacing picture-item"
+        data-groups='["branding"]'
+      >
+        <div
+          class="card border-0 work-container work-grid position-relative d-block overflow-hidden rounded"
+        >
+          <div class="card-body p-0">
+            <a
+              href="/shop/soon"
+              data-src="https://assets.myntassets.com/h_1440,q_90,w_1080/v1/assets/images/20380970/2022/10/13/cc0895cc-cfb4-4338-bfa7-dac4313959221665645066309AthenaMaroonThreePieceBlazerCo-Ordset1.jpg"
+              data-gallery="myGal"
+              class="d-inline-block"
+              title=""
+            >
+              <img
+                src="https://assets.myntassets.com/h_720,q_90,w_540/v1/assets/images/2322616/2023/1/5/8fec9724-7a1a-4ff0-a78b-81af7504430b1672914464443-Roadster-Women-Blue-Skinny-Fit-Mid-Rise-Clean-Look-Stretchab-1.jpg"
+                class="img-fluid rounded"
+                alt="work-image"
+              />
+            </a>
+            <div class="content bg-light p-3 shadow">
+              <h6>
+                <a
+                  href="/shop/soon"
+                  class="text-dark fw-medium fs-15"
+                  >Roadster | The Lifestyle Co. Skinny Fit Mid-Rise Clean Look Stretchable Jeans</a
+                >
+              </h6>
+              <p class="fs-14 text-muted font-weight-normal tag mb-0">
+                ₹999
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--end col-->
+
+      <div
+        class="col-lg-4 col-md-6 col-12 spacing picture-item"
+        data-groups='["designing"]'
+      >
+        <div
+          class="card border-0 work-container work-grid position-relative d-block overflow-hidden rounded"
+        >
+          <div class="card-body p-0">
+            <a
+              href="/shop/soon"
+              data-src="https://assets.myntassets.com/h_720,q_90,w_540/v1/assets/images/18169424/2022/5/6/8c743b4d-1b6e-4194-886e-7f7f5482b1aa1651805675496WomensRayonFoilPrintedJjumpsuitWithOneSidePocket1.jpg"
+              data-gallery="myGal"
+              class="d-inline-block"
+              title=""
+            >
+              <img
+                src="https://assets.myntassets.com/h_720,q_90,w_540/v1/assets/images/16897456/2022/4/4/b8dd855c-7a64-4567-a996-e8752d9b6f461649057472958-Anouk-Women-Jumpsuit-871649057472486-1.jpg"
+                class="img-fluid rounded"
+                alt="work-image"
+              />
+            </a>
+            <div class="content bg-light p-3 shadow">
+              <h6>
+                <a
+                  href="/shop/soon"
+                  class="text-dark fw-medium fs-15"
+                  >Anouk | Women Magenta & Golden Ethnic Motifs Printed Basic Jumpsuit</a
+                >
+              </h6>
+              <p class="fs-14 text-muted font-weight-normal tag mb-0">₹1499</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--end col-->
+
+      <div
+        class="col-lg-4 col-md-6 col-12 spacing picture-item"
+        data-groups='["development"]'
+      >
+        <div
+          class="card border-0 work-container work-grid position-relative d-block overflow-hidden rounded"
+        >
+          <div class="card-body p-0">
+            <a
+              href="/shop/soon"
+              data-src="https://assets.myntassets.com/h_720,q_90,w_540/v1/assets/images/16897456/2022/4/4/b8dd855c-7a64-4567-a996-e8752d9b6f461649057472958-Anouk-Women-Jumpsuit-871649057472486-1.jpg"
+              data-gallery="myGal"
+              class="d-inline-block"
+              title=""
+            >
+              <img
+                src="https://assets.myntassets.com/h_720,q_90,w_540/v1/assets/images/18169424/2022/5/6/8c743b4d-1b6e-4194-886e-7f7f5482b1aa1651805675496WomensRayonFoilPrintedJjumpsuitWithOneSidePocket1.jpg"
+                class="img-fluid rounded"
+                alt="work-image"
+              />
+            </a>
+            <div class="content bg-light p-3 shadow">
+              <h6>
+                <a
+                  href="/shop/soon"
+                  class="text-dark fw-medium fs-15"
+                  >J Turritopsis | Blue & Orange Foil Printed Basic Jumpsuit</a
+                >
+              </h6>
+              <p class="fs-14 text-muted font-weight-normal tag mb-0">₹999</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--end col-->
+
+      <div
+        class="col-lg-4 col-md-6 col-12 spacing picture-item"
+        data-groups='["development"]'
+      >
+        <div
+          class="card border-0 work-container work-grid position-relative d-block overflow-hidden rounded"
+        >
+          <div class="card-body p-0">
+            <a
+              href="/shop/soon"
+              data-src="https://assets.myntassets.com/h_720,q_90,w_540/v1/assets/images/13997466/2021/4/27/816814eb-b46f-48a8-9bea-f6a2e36c3ab61619526440381-Sera-Women-Red--Teal-Floral-Printed-Tie-Up-Shrug-34916195264-1.jpg"
+              data-gallery="myGal"
+              class="d-inline-block"
+              title=""
+            >
+              <img
+                src="https://assets.myntassets.com/h_720,q_90,w_540/v1/assets/images/21055586/2023/1/18/b97c66b9-72c8-4331-8a20-6199a31b5c6d1674039360295-Stylecast-X-Hersheinbox-Women-Conversational-Printed-Open-Fr-1.jpg"
+                class="img-fluid rounded"
+                alt="work-image"
+              />
+            </a>
+            <div class="content bg-light p-3 shadow">
+              <h6>
+                <a
+                  href="/shop/soon"
+                  class="text-dark fw-medium fs-15"
+                  >Stylecast X Hersheinbox | Women Conversational Printed Open Front Shrug</a
+                >
+              </h6>
+              <p class="fs-14 text-muted font-weight-normal tag mb-0">
+                ₹999
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--end col-->
+
+      <div
+        class="col-lg-4 col-md-6 col-12 spacing picture-item"
+        data-groups='["development"]'
+      >
+        <div
+          class="card border-0 work-container work-grid position-relative d-block overflow-hidden rounded"
+        >
+          <div class="card-body p-0">
+            <a
+              href="/shop/soon"
+              data-src="https://assets.myntassets.com/h_720,q_90,w_540/v1/assets/images/productimage/2020/11/21/ac642513-8cd6-46e1-b5b0-10cb9542eb451605945819520-1.jpg"
+              data-gallery="myGal"
+              class="d-inline-block"
+              title=""
+            >
+              <img
+                src="https://assets.myntassets.com/h_720,q_90,w_540/v1/assets/images/843410/2015/10/28/11446012451876-Roadster-Black-Henley-Sweater-9601446012451378-1.jpg"
+                class="img-fluid rounded"
+                alt="work-image"
+              />
+            </a>
+            <div class="content bg-light p-3 shadow">
+              <h6>
+                <a
+                  href="/shop/soon"
+                  class="text-dark fw-medium fs-15"
+                  >Roadster | Black Henley Sweater</a
+                >
+              </h6>
+              <p class="fs-14 text-muted font-weight-normal tag mb-0">₹1499</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--end col-->
+
+      <div
+        class="col-lg-4 col-md-6 col-12 spacing picture-item"
+        data-groups='["designing"]'
+      >
+        <div
+          class="card border-0 work-container work-grid position-relative d-block overflow-hidden rounded"
+        >
+          <div class="card-body p-0">
+            <a
+              href="/shop/soon"
+              data-src="/shop/soon"
+              data-gallery="myGal"
+              class="d-inline-block"
+              title=""
+            >
+              <img
+                src="https://assets.myntassets.com/h_720,q_90,w_540/v1/assets/images/9162835/2022/8/5/696b0ce4-d90e-4171-b8dc-487b65d1cf7f1659708668573HIGHLANDERMenGreyTaperedFitMid-RiseCleanLookStretchableJeans2.jpg"
+                class="img-fluid rounded"
+                alt="work-image"
+              />
+            </a>
+            <div class="content bg-light p-3 shadow">
+              <h6>
+                <a
+                  href="/shop/soon"
+                  class="text-dark fw-medium fs-15"
+                  >HIGHLANDER | Men Grey Tapered Fit Mid-Rise Clean Look Stretchable Jeans</a
+                >
+              </h6>
+              <p class="fs-14 text-muted font-weight-normal tag mb-0">₹1299</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--end col-->
+
+      <div
+        class="col-lg-4 col-md-6 col-12 spacing picture-item"
+        data-groups='["development"]'
+      >
+        <div
+          class="card border-0 work-container work-grid position-relative d-block overflow-hidden rounded"
+        >
+          <div class="card-body p-0">
+            <a
+              href="/shop/soon"
+              data-src="/shop/soon"
+              data-gallery="myGal"
+              class="d-inline-block"
+              title=""
+            >
+              <img
+                src="https://assets.myntassets.com/h_720,q_90,w_540/v1/assets/images/2290972/2018/5/5/11525515544459-Roadster-Men-Grey-Slim-Fit-Solid-Chinos-2351525515544256-1.jpg"
+                class="img-fluid rounded"
+                alt="work-image"
+              />
+            </a>
+            <div class="content bg-light p-3 shadow">
+              <h6>
+                <a
+                  href="/shop/soon"
+                  class="text-dark fw-medium fs-15"
+                  >Roadster | Time Travlr Men Grey Slim Fit Sustainable Chinos</a
+                >
+              </h6>
+              <p class="fs-14 text-muted font-weight-normal tag mb-0">₹1999</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--end col-->
+    </div>
+    <!--end row-->
+  </div>
+</section>
+{% endblock section %} {% block extra_js %}
+
+<script src="{{url_for('static' ,filename='js/shuffle.min.js')}}"></script>
+<script src="{{url_for('static' ,filename='js/gallery.init.js')}}"></script>
+<script src="{{url_for('static' ,filename='js/counter.js')}}"></script>
+<script src="{{url_for('static' ,filename='js/slider.js')}}"></script>
+
+{% endblock extra_js %}

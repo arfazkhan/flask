@@ -1,0 +1,77 @@
+{% block navbar %}
+    <!-- Start Navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top sticky mx-auto" id="navbar">
+        <div class="container">
+            <a href="/" class="navbar-brand me-4">
+                <img src="{{url_for('static' ,filename='images/logo-light.png')}}" class="logo-light" alt="" height="18" />
+                <img src="{{url_for('static' ,filename='images/logo-dark.png')}}" class="logo-dark" alt="" height="18" />
+            </a>
+
+            <div class="navbar-header">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#navbar-collapse-1" aria-expanded="false" aria-label="Toggle navigation">
+                  <i class="fas fa-bars"></i>
+                </button>
+              </div>
+
+            <div class="collapse navbar-collapse" id="navbar-collapse-1">
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item"><a class="nav-link sub-menu-item" href="/shop/productsmen">Men</a></li>
+                    <li class="nav-item"><a class="nav-link sub-menu-item" href="/shop/soon">Women</a></li>
+                    <li class="nav-item"><a class="nav-link sub-menu-item" href="/shop/soon">Kids</a></li>
+                    <li class="nav-item"><a class="nav-link sub-menu-item" href="/shop/soon">Home & Living</a></li>
+                    <li class="nav-item1"></li>  
+                    <li class="nav-item d-flex align-items-center">
+                        <form class="d-flex align-items-center">
+                            <div class="input-group">
+                              <input class="form-control" type="search" placeholder="🔍︎  Search for products, brands and more" aria-label="Search" style="width: 415px; height: 30px; font-size: 16px; font-family: Arial, sans-serif;">
+                             
+                            </div>
+                          </form>
+                          
+                          
+                        <script>
+                            var input = document.getElementById("search-input");
+                            input.addEventListener("keyup", function(event) {
+                                if (event.keyCode === 13) {
+                                    event.preventDefault();
+                                    document.getElementById("search-form").submit();
+                                }
+                            });
+                        </script>
+                        
+                    </li>
+                    <li class="nav-item2"></li> 
+                    <li class="nav-item dropdown">
+                        
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                            data-bs-toggle="" ari0-expanded="false">
+                            <i class="fas fa-user"></i>
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <li><a class="dropdown-item" >Welcome</a></li>
+                            <li><a class="dropdown-item" href="/shop/log">Login / Signup</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="/shop/soon">Orders</a></li>
+                            <li><a class="dropdown-item" href="/shop/soon">Wishlist</a></li>
+                            <li><a class="dropdown-item" href="/shop/soon">Gift Cards</a></li>
+                            <li><a class="dropdown-item" href="/shop/soon">Contact Us</a></li>
+                            <li><a class="dropdown-item" href="/shop/soon">Vysta Credits & Coupons</a></li>
+                            <li><a class="dropdown-item" href="/shop/soon">Coupons</a></li>
+                            <li><a class="dropdown-item" href="/shop/soon">Saved Cards</a></li>
+                            <li><a class="dropdown-item" href="/shop/soon">Saved Addresses</a></li>
+                            </ul>
+                            <style>
+                                .dropdown-toggle::after {
+                                    display: none;
+                                }
+                                </style>
+                    </li>
+                    <li class="nav-item"><a class="nav-link sub-menu-item" href="/shop/cart"><i class="fas fa-shopping-bag"></i></a></li>
+                    <li class="nav-item"><a class="nav-link sub-menu-item" href="/shop/wishlist"><i class="fas fa-heart"></i></a></li>
+                </ul>
+            </div>
+            
+    </nav>
+    <!-- END NAVBAR -->
+{% endblock navbar %}

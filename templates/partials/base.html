@@ -1,0 +1,49 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Online shopping for Men, Women, Kids & Lifestyle | Vysta</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Online shopping for Men, Women, Kids & Lifestyle | Vysta" />
+    <meta name="keywords" content="Men, Women, Kids, Lifestyle, Vysta, Shopping, Online, Fashion" />
+    <meta name="author" content="Arfaz Khan" />
+
+    <!-- App favicon -->
+    <link rel="shortcut icon" href="{{url_for('static' ,filename='images/favicon.ico')}}" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+
+
+    {% block css %}
+    {% include 'partials/css.html' %}
+    {% endblock css %}
+
+
+</head>
+
+<body data-bs-target=".navbar" data-bs-offset="110">
+    
+  
+    
+    {% block navbar %}
+    {% include 'partials/navbar.html' %}
+    {% endblock navbar %}
+
+    {% block section %}
+    {% endblock section %}  
+
+    {% block footer %}
+    {% include 'partials/footer.html' %}
+    {% endblock footer %}    
+
+    {% block extra_js %}    
+    {% endblock extra_js %}
+
+    {% block javascript %}
+    {% include 'partials/javascript.html' %}
+    {% endblock javascript %}
+
+</body>
+
+</html>
